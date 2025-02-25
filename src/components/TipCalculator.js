@@ -23,8 +23,15 @@ const TipCalculator = () => {
     };
 
     const handleTipChange = (e) => {
-        const value = parseFloat(e.target.value);
-        setTipPercentage(value >= 0 ? value : 0);  // No negative tips
+        const inputValue = e.target.value;
+
+        if (inputValue === '') {
+            setTipPercentage(inputValue);
+            return;
+        }
+    
+        const value = Math.abs(parseFloat(inputValue));
+        setTipPercentage(isNaN(value) ? 0 : value);
     };
 
     return (
