@@ -22,7 +22,7 @@ const TipCalculator = () => {
 
     return (
         <div className="max-w-md mx-auto mt-10 p-6 bg-white rounded-2xl shadow-lg space-y-4">
-            <h1 className="text-2xl font-bold text-center">Tip Calculator 💸</h1>
+            <h1 className="text-2xl font-bold text-center">Tip Calculator</h1>
 
             <div>
                 <label className="block text-gray-700 mb-2">Bill Amount ($):</label>
@@ -47,8 +47,8 @@ const TipCalculator = () => {
             </div>
 
             <div className="border-t pt-4 space-y-2">
-                <p className="text-lg">💰 Tip Amount: <span className="font-bold">${tipAmount.toFixed(2)}</span></p>
-                <p className="text-lg">💳 Total Amount: <span className="font-bold">${totalAmount.toFixed(2)}</span></p>
+                <p className="text-lg">Tip Amount: <span className="font-bold">${tipAmount.toFixed(2)}</span></p>
+                <p className="text-lg">Total Amount: <span className="font-bold">${totalAmount.toFixed(2)}</span></p>
             </div>
         </div>
     );
