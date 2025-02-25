@@ -11,8 +11,15 @@ const TipCalculator = () => {
 
     // Handlers
     const handleBillChange = (e) => {
-        const value = parseFloat(e.target.value);
-        setBillAmount(value >= 0 ? value : 0);  // No negative bills
+        const inputValue = e.target.value;
+    
+        if (inputValue === '') {
+            setBillAmount(inputValue);
+            return;
+        }
+    
+        const value = Math.abs(parseFloat(inputValue));
+        setBillAmount(isNaN(value) ? 0 : value);
     };
 
     const handleTipChange = (e) => {
