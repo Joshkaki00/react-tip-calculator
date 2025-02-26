@@ -46,14 +46,17 @@ const TipCalculator = () => {
     };
 
     // Increment & Decrement Handlers
-    const incrementBill = () => setBillAmount(prev => prev + 1);
-    const decrementBill = () => setBillAmount(prev => (prev - 1 >= 0 ? prev - 1 : 0));
+    const incrementBill = () => setBillAmount(prev => prev + 5);
+    const decrementBill = () => setBillAmount(prev => (prev - 5 >= 0 ? prev - 5 : 0));
 
     const incrementTip = () => setTipPercentage(prev => prev + 1);
     const decrementTip = () => setTipPercentage(prev => (prev - 1 >= 0 ? prev - 1 : 0));
 
     const incrementPeople = () => setNumberOfPeople(prev => prev + 1);
     const decrementPeople = () => setNumberOfPeople(prev => (prev - 1 >= 1 ? prev - 1 : 1));
+
+    // Preset Tip Handlers
+    const handlePresetTip = (percentage) => setTipPercentage(percentage);
 
     return (
         <div className="max-w-md mx-auto mt-10 p-6 bg-white rounded-2xl shadow-lg space-y-4">
@@ -88,6 +91,14 @@ const TipCalculator = () => {
                         min="0"
                     />
                     <button onClick={incrementTip} className="px-3 py-2 bg-gray-200 rounded-lg">+</button>
+                </div>
+
+                {/* Preset Tip Buttons */}
+                <div className="flex justify-center space-x-2 mt-2">
+                    <button onClick={() => handlePresetTip(10)} className="px-4 py-2 bg-blue-500 text-white rounded-lg">10%</button>
+                    <button onClick={() => handlePresetTip(15)} className="px-4 py-2 bg-blue-500 text-white rounded-lg">15%</button>
+                    <button onClick={() => handlePresetTip(18)} className="px-4 py-2 bg-blue-500 text-white rounded-lg">18%</button>
+                    <button onClick={() => handlePresetTip(20)} className="px-4 py-2 bg-blue-500 text-white rounded-lg">20%</button>
                 </div>
             </div>
 
