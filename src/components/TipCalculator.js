@@ -46,8 +46,8 @@ const TipCalculator = () => {
     };
 
     // Increment & Decrement Handlers
-    const incrementBill = () => setBillAmount(prev => prev + 5);
-    const decrementBill = () => setBillAmount(prev => (prev - 5 >= 0 ? prev - 5 : 0));
+    const incrementBill = () => setBillAmount(prev => prev + 1);
+    const decrementBill = () => setBillAmount(prev => (prev - 1 >= 0 ? prev - 1 : 0));
 
     const incrementTip = () => setTipPercentage(prev => prev + 1);
     const decrementTip = () => setTipPercentage(prev => (prev - 1 >= 0 ? prev - 1 : 0));
