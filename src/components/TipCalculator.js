@@ -45,43 +45,69 @@ const TipCalculator = () => {
         setNumberOfPeople(isNaN(value) || value === 0 ? 1 : value);
     };
 
+    // Increment & Decrement Handlers
+    const incrementBill = () => setBillAmount(prev => prev + 5);
+    const decrementBill = () => setBillAmount(prev => (prev - 5 >= 0 ? prev - 5 : 0));
+
+    const incrementTip = () => setTipPercentage(prev => prev + 1);
+    const decrementTip = () => setTipPercentage(prev => (prev - 1 >= 0 ? prev - 1 : 0));
+
+    const incrementPeople = () => setNumberOfPeople(prev => prev + 1);
+    const decrementPeople = () => setNumberOfPeople(prev => (prev - 1 >= 1 ? prev - 1 : 1));
+
     return (
         <div className="max-w-md mx-auto mt-10 p-6 bg-white rounded-2xl shadow-lg space-y-4">
             <h1 className="text-2xl font-bold text-center">Tip Calculator</h1>
 
+            {/* Bill Amount */}
             <div>
                 <label className="block text-gray-700 mb-2">Bill Amount ($):</label>
-                <input 
-                    type="number" 
-                    value={billAmount} 
-                    onChange={handleBillChange} 
-                    className="w-full p-2 border rounded-lg" 
-                    min="0"
-                />
+                <div className="flex items-center space-x-2">
+                    <button onClick={decrementBill} className="px-3 py-2 bg-gray-200 rounded-lg">-</button>
+                    <input 
+                        type="number" 
+                        value={billAmount} 
+                        onChange={handleBillChange} 
+                        className="w-full p-2 border rounded-lg text-center" 
+                        min="0"
+                    />
+                    <button onClick={incrementBill} className="px-3 py-2 bg-gray-200 rounded-lg">+</button>
+                </div>
             </div>
 
+            {/* Tip Percentage */}
             <div>
                 <label className="block text-gray-700 mb-2">Tip Percentage (%):</label>
-                <input 
-                    type="number" 
-                    value={tipPercentage} 
-                    onChange={handleTipChange} 
-                    className="w-full p-2 border rounded-lg" 
-                    min="0"
-                />
+                <div className="flex items-center space-x-2">
+                    <button onClick={decrementTip} className="px-3 py-2 bg-gray-200 rounded-lg">-</button>
+                    <input 
+                        type="number" 
+                        value={tipPercentage} 
+                        onChange={handleTipChange} 
+                        className="w-full p-2 border rounded-lg text-center" 
+                        min="0"
+                    />
+                    <button onClick={incrementTip} className="px-3 py-2 bg-gray-200 rounded-lg">+</button>
+                </div>
             </div>
 
+            {/* Number of People */}
             <div>
                 <label className="block text-gray-700 mb-2">Number of People:</label>
-                <input 
-                    type="number" 
-                    value={numberOfPeople} 
-                    onChange={handlePeopleChange} 
-                    className="w-full p-2 border rounded-lg" 
-                    min="1"
-                />
+                <div className="flex items-center space-x-2">
+                    <button onClick={decrementPeople} className="px-3 py-2 bg-gray-200 rounded-lg">-</button>
+                    <input 
+                        type="number" 
+                        value={numberOfPeople} 
+                        onChange={handlePeopleChange} 
+                        className="w-full p-2 border rounded-lg text-center" 
+                        min="1"
+                    />
+                    <button onClick={incrementPeople} className="px-3 py-2 bg-gray-200 rounded-lg">+</button>
+                </div>
             </div>
 
+            {/* Output */}
             <div className="border-t pt-4 space-y-2">
                 <p className="text-lg">Tip Amount: <span className="font-bold">${tipAmount.toFixed(2)}</span></p>
                 <p className="text-lg">Total Amount: <span className="font-bold">${totalAmount.toFixed(2)}</span></p>
