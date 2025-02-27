@@ -1,4 +1,3 @@
-//import './App.css';
 import TipCalculator from './components/TipCalculator';
 
 const App = () => {

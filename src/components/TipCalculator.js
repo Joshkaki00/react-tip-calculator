@@ -33,7 +33,7 @@ const TipCalculator = () => {
         <div className="max-w-4xl mx-auto mt-10 p-8 bg-white rounded-2xl shadow-lg grid grid-cols-2 gap-8 border border-gray-200">
             {/* Left Column: Inputs */}
             <div className="space-y-6 border-r border-gray-200 pr-8">
-                <h1 className="text-2xl font-bold text-gray-700">Tip Calculator</h1>
+                <h1 className="text-2xl text-center font-bold text-gray-700">Tip Calculator</h1>
 
                 {/* Bill Amount */}
                 <div>
