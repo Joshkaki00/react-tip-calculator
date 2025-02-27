@@ -1,4 +1,4 @@
-import './App.css';
+//import './App.css';
 import TipCalculator from './components/TipCalculator';
 
 const App = () => {
