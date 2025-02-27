@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import './TipCalculator.css';
 
 const TipCalculator = () => {
     const [billAmount, setBillAmount] = useState(0);
