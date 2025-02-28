@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/Joshkaki00/react-tip-calculator/static/css/main.d8b9b639.css",
-    "main.js": "/Joshkaki00/react-tip-calculator/static/js/main.9cd2ac6f.js",
-    "static/js/453.a9b84afb.chunk.js": "/Joshkaki00/react-tip-calculator/static/js/453.a9b84afb.chunk.js",
-    "index.html": "/Joshkaki00/react-tip-calculator/index.html",
-    "main.d8b9b639.css.map": "/Joshkaki00/react-tip-calculator/static/css/main.d8b9b639.css.map",
-    "main.9cd2ac6f.js.map": "/Joshkaki00/react-tip-calculator/static/js/main.9cd2ac6f.js.map",
-    "453.a9b84afb.chunk.js.map": "/Joshkaki00/react-tip-calculator/static/js/453.a9b84afb.chunk.js.map"
+    "main.css": "/react-tip-calculator/static/css/main.d8b9b639.css",
+    "main.js": "/react-tip-calculator/static/js/main.2efac90c.js",
+    "static/js/453.a9b84afb.chunk.js": "/react-tip-calculator/static/js/453.a9b84afb.chunk.js",
+    "index.html": "/react-tip-calculator/index.html",
+    "main.d8b9b639.css.map": "/react-tip-calculator/static/css/main.d8b9b639.css.map",
+    "main.2efac90c.js.map": "/react-tip-calculator/static/js/main.2efac90c.js.map",
+    "453.a9b84afb.chunk.js.map": "/react-tip-calculator/static/js/453.a9b84afb.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.d8b9b639.css",
-    "static/js/main.9cd2ac6f.js"
+    "static/js/main.2efac90c.js"
   ]
 }
