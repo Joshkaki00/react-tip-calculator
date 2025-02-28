@@ -2,7 +2,7 @@
   "name": "tip-calculator-app",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://github.com/Joshkaki00/react-tip-calculator",
+  "homepage": "https://joshkaki00.github.io/react-tip-calculator/",
   "dependencies": {
     "@testing-library/dom": "^10.4.0",
     "@testing-library/jest-dom": "^6.6.3",
